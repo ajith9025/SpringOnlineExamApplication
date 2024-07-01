@@ -2,10 +2,10 @@ package com.chainsys.onlineexam.model;
 
 public class Register {
 	int userId;
-	String username;
-	String password;
+	String userName;
+	String passWord;
 	String email;
-    String contactno;
+    String contactNo;
 	
     public int getUserId() {
 		return userId;
@@ -14,17 +14,17 @@ public class Register {
 		this.userId = userId;
 	}
 	public String getUsername() {
-		return username;
+		return userName;
 	}
 	
-	public void setUsername(String username) {
-		this.username = username;
+	public void setUsername(String userName) {
+		this.userName = userName;
 	}
 	public String getPassword() {
-		return password;
+		return passWord;
 	}
-	public void setPassword(String password) {
-		this.password = password;
+	public void setPassword(String passWord) {
+		this.passWord = passWord;
 	}
 	public String getEmail() {
 		return email;
@@ -33,27 +33,27 @@ public class Register {
 		this.email = email;
 	}
 	public String getContactno() {
-		return contactno;
+		return contactNo;
 	}
-	public void setContactno(String contactno) {
-		this.contactno = contactno;
+	public void setContactno(String contactNo) {
+		this.contactNo = contactNo;
 	}
 	
-	public Register(int userId, String username, String password, String email, String contactno) {
+	public Register(int userId, String userName, String passWord, String email, String contactNo) {
 		super();
 		this.userId = userId;
-		this.username = username;
-		this.password = password;
+		this.userName = userName;
+		this.passWord = passWord;
 		this.email = email;
-		this.contactno = contactno;
+		this.contactNo = contactNo;
 	}
 	public Register() {
 		// TODO Auto-generated constructor stub
 	}
 	@Override
 	public String toString() {
-		return "Register [userId=" + userId + ", username=" + username + ", password=" + password + ", email=" + email
-				+ ", contactno=" + contactno + "]";
+		return "Register [userId=" + userId + ", username=" + userName + ", password=" + passWord + ", email=" + email
+				+ ", contactno=" + contactNo + "]";
 	}
 }
 
