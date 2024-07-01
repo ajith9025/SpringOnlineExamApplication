@@ -6,24 +6,28 @@ public class Register {
 	String passWord;
 	String email;
     String contactNo;
-	
-    public int getUserId() {
+    
+    
+    public Register() {
+		// TODO Auto-generated constructor stub
+	}
+    
+	public int getUserId() {
 		return userId;
 	}
 	public void setUserId(int userId) {
 		this.userId = userId;
 	}
-	public String getUsername() {
+	public String getUserName() {
 		return userName;
 	}
-	
-	public void setUsername(String userName) {
+	public void setUserName(String userName) {
 		this.userName = userName;
 	}
-	public String getPassword() {
+	public String getPassWord() {
 		return passWord;
 	}
-	public void setPassword(String passWord) {
+	public void setPassWord(String passWord) {
 		this.passWord = passWord;
 	}
 	public String getEmail() {
@@ -32,11 +36,17 @@ public class Register {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getContactno() {
+	public String getContactNo() {
 		return contactNo;
 	}
-	public void setContactno(String contactNo) {
+	public void setContactNo(String contactNo) {
 		this.contactNo = contactNo;
+	}
+	
+	@Override
+	public String toString() {
+		return "Register [userId=" + userId + ", userName=" + userName + ", passWord=" + passWord + ", email=" + email
+				+ ", contactNo=" + contactNo + "]";
 	}
 	
 	public Register(int userId, String userName, String passWord, String email, String contactNo) {
@@ -47,13 +57,5 @@ public class Register {
 		this.email = email;
 		this.contactNo = contactNo;
 	}
-	public Register() {
-		// TODO Auto-generated constructor stub
-	}
-	@Override
-	public String toString() {
-		return "Register [userId=" + userId + ", username=" + userName + ", password=" + passWord + ", email=" + email
-				+ ", contactno=" + contactNo + "]";
-	}
-}
 
+}

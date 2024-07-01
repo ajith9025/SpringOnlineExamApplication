@@ -23,7 +23,7 @@
 <body>
 <div class="container">
   <h2 class="mb-4">Login Form</h2>
-  <form action="" method="post">
+  <form action="/login" method="post">
    
     <div class="content">
       <i class="fa fa-envelope icon"></i>

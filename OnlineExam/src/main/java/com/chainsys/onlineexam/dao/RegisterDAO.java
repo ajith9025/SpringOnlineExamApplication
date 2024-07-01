@@ -8,6 +8,7 @@ import com.chainsys.onlineexam.model.Register;
 public interface RegisterDAO{
 	
 	public void save(Register register);
-	
+
+	public Register findByEmailAndPassword(String email, String passWord);
 
 }

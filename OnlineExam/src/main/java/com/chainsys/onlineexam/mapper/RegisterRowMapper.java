@@ -17,10 +17,10 @@ public class RegisterRowMapper implements RowMapper<Register> {
 		// TODO Auto-generated method stub
 		Register register=new Register();
 		register.setUserId(rs.getInt("user_id"));
-		register.setUsername(rs.getString("username"));
-		register.setPassword(rs.getString("password"));
+		register.setUserName(rs.getString("username"));
+		register.setPassWord(rs.getString("password"));
 		register.setEmail(rs.getString("email"));
-		register.setContactno(rs.getString("contact_no"));
+		register.setContactNo(rs.getString("contact_no"));
 		return register;
 	}
 

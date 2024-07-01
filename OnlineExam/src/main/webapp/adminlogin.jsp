@@ -73,7 +73,6 @@ footer {
 <body>
          <nav>
             <ul class="navbar">
-               
                  <li><a href="exam.jsp">Add Exam</a></li>
                  <li><a href="question.html">Add Question</a></li>
                   <li><a href="results.jsp">Add Results</a></li>
