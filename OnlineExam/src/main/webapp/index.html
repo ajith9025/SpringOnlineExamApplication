@@ -7,7 +7,10 @@
 <link rel="stylesheet" href="exam.css">
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+	
 <title>Online Examination Skill Evaluator</title>
+
+
 <style>
 body {
 	margin: 0;
@@ -17,6 +20,74 @@ body {
 
 * {
 	box-sizing: border-box;
+}
+.container {
+	max-width: 800px;
+	margin: 20px auto;
+	background-color: #fff;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.cart-list {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 20px;
+}
+
+.cart-item {
+	background-color: #f9f9f9;
+	padding: 15px;
+	border-radius: 8px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item h2 {
+	margin-top: 0;
+}
+
+.cart-item p {
+	margin-bottom: 10px;
+}
+
+.cart-item a {
+	display: inline-block;
+	padding: 5px 10px;
+	background-color: #007bff;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 5px;
+}
+
+.cart-item a:hover {
+	background-color: #0056b3;
+}
+#trusted-by {
+	padding: 50px 0;
+	background-color: #f8f9fa;
+	text-align: center;
+}
+
+.trusted-logos {
+	margin-top: 20px;
+}
+
+.trusted-logos img {
+	max-height: 200px;
+	margin: 0 15px;
+	opacity: 0.7;
+	/* Adjust opacity as needed */
+}
+
+.trusted-logos img:hover {
+	opacity: 1;
+	/* Full opacity on hover */
 }
 
 input[type=text], input[type=email], select, textarea {
@@ -147,6 +218,8 @@ footer .container {
 .widget-menu li a:hover {
 	background-color: orange;
 }
+
+
 </style>
 <script>
 	function handleSubmit(event) {
@@ -162,7 +235,7 @@ footer .container {
 
 			<li><a class="active" href="#">Home</a></li>
 			<li><a href="examPage.jsp">Start Exam</a></li>
-			<li><a href="Contact.jsp">Contact Us</a></li>
+			<li><a href="contact.jsp">Contact Us</a></li>
 			<li><a href="index.jsp">Logout</a></li>
 
 		</ul>
@@ -181,254 +254,50 @@ footer .container {
 	<br>
 
 
-	<div class="wp-block-rank-math-toc-block" id="rank-math-toc">
-		<h2>Table of Contents</h2>
-		<ul>
-			<li><a href="#what-is-an-online-exam">What is an Online
-					Exam?</a></li>
-			<li><a
-				href="#what-is-the-real-time-solution-for-conducting-online-exams">What
-					is the real-time solution for conducting Online Exams?</a></li>
-			<li><a
-				href="#apart-from-conducting-online-exams-here-are-some-of-its-exceptional-features">Apart
-					from conducting Online Exams, here are some of its Exceptional
-					Features:</a>
-				<ul>
-					<li><a href="#creating-multiple-question-papers">Creating
-							Multiple Question Papers</a></li>
-					<li><a href="#forget-about-question-paper-leaks">Forget
-							about Question Paper Leaks</a></li>
-					<li><a href="#e-exam-management-and-answer-processing-modules">eExam
-							Management and Answer Processing Modules</a></li>
-					<li><a href="#combat-methods-of-cheating-in-online-exams">Combat
-							Methods of Cheating in Online Exams</a></li>
-				</ul></li>
-		</ul>
+	<div class="container">
+		<h1>Select Your Skills</h1>
+		<div class="cart-list">
+			<div class="cart-item">
+				<h2>Java</h2>
+                <p><a href="JavaDetails.jsp">Java Technology</a></p>
+				<a href="test">Take Test</a>
+			</div>
+			<div class="cart-item">
+				<h2>HTML</h2>
+                <p><a href="JavaDetails.jsp">HTML Technology</a></p>
+				<a href="test">Take Test</a>
+			</div>
+			<div class="cart-item">
+				<h2>CSS</h2>
+                <p><a href="JavaDetails.jsp">CSS Technology</a></p>
+				<a href="test">Take Test</a>
+			</div>
+			<div class="cart-item">
+				<h2>Python</h2>
+                <p><a href="JavaDetails.jsp"> Technology</a></p>
+				<a href="test">Take Test</a>
+			</div>
+		</div>
 	</div>
 
+	<section id="trusted-by">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<h2>Our Client Partner</h2>
+					<div class="trusted-logos">
+						<img src="amazon.png" alt="Company 1"> <img src="TCS.png"
+							alt="Company 2"> <img src="google.png" alt="Company 3">
+						<img src="zoho.png" alt="Company 4"> <img src="hcl1.png"
+							alt="Company 5">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
 
-	<p>
-		<span style="font-weight: 400;">We have seen a big change in
-			our education system in the last few months during this pandemic.
-			With the use of the internet and many latest technologies, students
-			can now access different online learning options. This has also
-			resulted in giving mock tests at home via the internet. They
-			don&#8217;t have to be physically present in the classrooms to
-			receive quality education.&nbsp;</span>
-	</p>
 
-
-
-	<p>
-		<span style="font-weight: 400;">So, in this new era of online
-			education, educational institutes and corporate companies who conduct
-			exams have started utilizing exceptional online exam software like</span>
-		ExamOnline<span style="font-weight: 400;"> to ensure safety and
-			quality in each part of the examination process. How? Let&#8217;s
-			find out.</span>
-	</p>
-
-
-
-	<h2 class="wp-block-heading" id="what-is-an-online-exam">
-		<span style="font-weight: 400;">What is an Online Exam?</span>
-	</h2>
-
-
-
-	<p>
-		<span style="font-weight: 400;">An online exam (also called</span>
-		eExam<span style="font-weight: 400;">) is a great way of
-			conducting tests</span> <span style="font-weight: 400;">and other
-			important exams with help of the internet. An <strong>online
-				examination system</strong>needs a device capable of accessing the internet
-			such as a computer or a smartphone.
-		</span>
-	</p>
-
-
-
-	<p>
-		<span style="font-weight: 400;">This can be either done at an
-			examination center or at home. It can be useful as a remote</span> <span
-			style="font-weight: 400;">learning system where candidates can
-			appear in an exam from their own device by sitting in the comfort of
-			their homes. They do not have to invest their valuable time in
-			traveling to and from the center.</span>
-	</p>
-
-
-
-	<p>
-		<span style="font-weight: 400;">This is the best way to conduct
-			exams as schools,</span> <span style="font-weight: 400;">universities,
-			and other institutions don&#8217;t have to invest in examination
-			centers, invigilators, and security. A microphone and a webcam are
-			sufficient for this process.&nbsp;</span>
-	</p>
-
-
-
-	<h2 class="wp-block-heading"
-		id="what-is-the-real-time-solution-for-conducting-online-exams">
-		<span style="font-weight: 400;">What is the real-time solution
-			for conducting Online Exams?</span>
-	</h2>
-
-
-
-	<p>
-		<span style="font-weight: 400;">ExamOnline,a perfect end-to-end
-			cloud-based solution, is a brilliant system to conduct different
-			examinations online. This technology is beneficial for all types of
-			tests including certification tests, admission tests for institutions
-			and universities, or even big recruitment and assessment tests.</span>
-	</p>
-
-
-
-	<h2 class="wp-block-heading"
-		id="apart-from-conducting-online-exams-here-are-some-of-its-exceptional-features">
-		<span style="font-weight: 400;">Apart from conducting Online
-			Exams, here are some of its Exceptional Features:</span>
-	</h2>
-
-
-
-	<h3 class="wp-block-heading" id="creating-multiple-question-papers">
-		<span style="font-weight: 400;">Creating Multiple Question
-			Papers</span>
-	</h3>
-
-
-
-	<p>
-		<span style="font-weight: 400;">Designing question papers for a
-			particular exam is a big task as it doesn&#8217;t end with just
-			creating a question paper. Apart from selecting the right questions
-			for multiple question papers, the exam conducting authorities have to
-			spend their time on printing that paper, distributing it in multiple
-			exam centers with security. ExamOnline comes to your rescue and
-			performs all these tasks online so that you can conduct digital exams
-			efficiently.</span>
-	</p>
-
-
-
-	<h3 class="wp-block-heading" id="forget-about-question-paper-leaks">
-		<span style="font-weight: 400;">Forget about Question Paper
-			Leaks</span>
-	</h3>
-
-
-
-	<p>
-		<span style="font-weight: 400;">In the traditional educational
-			system, we have frequently heard about question paper leaks. Now you
-			can forget about the chances of this situation with the security
-			offered by this updated technology.</span>
-	</p>
-
-
-
-	<h3 class="wp-block-heading"
-		id="e-exam-management-and-answer-processing-modules">
-		<span style="font-weight: 400;">eExam Management and Answer
-			Processing Modules</span>
-	</h3>
-
-
-
-	<p>
-		<span style="font-weight: 400;">Apart from designing multiple
-			question papers for different students, institutes can evaluate the
-			answer papers and generate grades accordingly without investing
-			months to handle answer sheets.</span>
-	</p>
-
-
-
-	<p>
-		<span style="font-weight: 400;">The traditional exam process
-			doesn&#8217;t give you the flexibility to make last-minute changes.
-			But this superior online examination technology and its answer
-			processing modules make everything possible to provide you with the
-			best result.</span>
-	</p>
-
-
-
-	<figure class="wp-block-image">
-		<a href="Contact.jsp"><img
-			data-rt-lazy="https://examonline.in/wp-content/uploads/2020/11/exam-online-1.png"
-			loading="lazy"
-			data-rt-lazy-set="https://examonline.in/wp-content/uploads/2020/11/exam-online-1.png 2192w, https://examonline.in/wp-content/uploads/2020/11/exam-online-1-300x104.png 300w, https://examonline.in/wp-content/uploads/2020/11/exam-online-1-1024x355.png 1024w, https://examonline.in/wp-content/uploads/2020/11/exam-online-1-1536x533.png 1536w, https://examonline.in/wp-content/uploads/2020/11/exam-online-1-100x35.png 100w, https://examonline.in/wp-content/uploads/2020/11/exam-online-1-800x277.png 800w"
-			data-object-fit="~" decoding="async" width="1000" height="500"
-			alt="online exam software" class="wp-image-8517"
-			title="What Is Online Exam (eExam) 1"
-			srcset="https://examonline.in/wp-content/uploads/2020/11/exam-online-1.png 2192w, https://examonline.in/wp-content/uploads/2020/11/exam-online-1-300x104.png 300w, https://examonline.in/wp-content/uploads/2020/11/exam-online-1-1024x355.png 1024w, https://examonline.in/wp-content/uploads/2020/11/exam-online-1-1536x533.png 1536w, https://examonline.in/wp-content/uploads/2020/11/exam-online-1-100x35.png 100w, https://examonline.in/wp-content/uploads/2020/11/exam-online-1-800x277.png 800w"
-			sizes="(max-width: 2192px) 100vw, 2192px" /></a>
-	</figure>
-
-
-
-	<h3 class="wp-block-heading"
-		id="combat-methods-of-cheating-in-online-exams">
-		<span style="font-weight: 400;">Combat Methods of Cheating in
-			Online Exams</span>
-	</h3>
-
-
-
-	<figure class="wp-block-image">
-		<img
-			data-rt-lazy="https://examonline.in/wp-content/uploads/2020/11/cheating-during-exam-1536x864.jpg"
-			loading="lazy"
-			data-rt-lazy-set="https://examonline.in/wp-content/uploads/2020/11/cheating-during-exam-1536x864.jpg 1536w, https://examonline.in/wp-content/uploads/2020/11/cheating-during-exam-300x169.jpg 300w, https://examonline.in/wp-content/uploads/2020/11/cheating-during-exam-1024x576.jpg 1024w, https://examonline.in/wp-content/uploads/2020/11/cheating-during-exam-100x56.jpg 100w, https://examonline.in/wp-content/uploads/2020/11/cheating-during-exam-800x450.jpg 800w, https://examonline.in/wp-content/uploads/2020/11/cheating-during-exam-scaled.jpg 1840w"
-			data-object-fit="~" loading="lazy" decoding="async" width="1000"
-			height="300" alt="student giving online exam" class="wp-image-8456"
-			title="What Is Online Exam (eExam) 2"
-			srcset="https://examonline.in/wp-content/uploads/2020/11/cheating-during-exam-1536x864.jpg 1536w, https://examonline.in/wp-content/uploads/2020/11/cheating-during-exam-300x169.jpg 300w, https://examonline.in/wp-content/uploads/2020/11/cheating-during-exam-1024x576.jpg 1024w, https://examonline.in/wp-content/uploads/2020/11/cheating-during-exam-100x56.jpg 100w, https://examonline.in/wp-content/uploads/2020/11/cheating-during-exam-800x450.jpg 800w, https://examonline.in/wp-content/uploads/2020/11/cheating-during-exam-scaled.jpg 1840w"
-			sizes="(max-width: 1536px) 100vw, 1536px" />
-	</figure>
-
-
-
-	<p>
-		<span style="font-weight: 400;">This was only one part of
-			online exams. The other part is the security which is very crucial. A
-			unique threat posed by online exams is the ease of cheating.</span>
-	</p>
-
-
-
-	<p>
-		<span style="font-weight: 400;">Invigilating while a candidate
-			takes a test can happen at an exam center but cheating becomes a
-			piece of cake when the invigilator can not be present with the
-			candidate.</span>
-	</p>
-
-
-
-	<p>
-		<span style="font-weight: 400;">But an online proctoring system
-			has great solutions to all such issues. For example, it uses
-			artificial intelligence that makes automated live proctoring
-			possible. It can even detect if the candidate moves his neck. It also
-			keeps track of the tabs open on the candidate&#8217;s device.</span>
-	</p>
-
-
-
-	<p>
-		<span style="font-weight: 400;">So you can easily understand
-			that from certification tests to admission tests for institutions and
-			universities or even big recruitment assessment tests, ensuring the
-			integrity of online mock tests to detect and deter cheating is now
-			possible.</span>
-	</p>
 
 
 	<div class="row">
@@ -442,17 +311,18 @@ footer .container {
 			</div>
 			<div class="column">
 				<form onsubmit="handleSubmit(event)">
-					<label for="fname">First Name</label> <input type="text" id="fname"
-						name="firstname" placeholder=" Enter Your  Firstname" required>
-					<label for="lastname">Last Name</label> <input type="text"
-						id="lname" name="lastname" placeholder=" Enter Your Lastname"
-						required> <label for="" email>Email</label> <input
-						type="email" id="email" name="email"
-						placeholder=" Enter Your Email" required> <label
+					<label for="fname">First Name</label> <input type="text"
+						id="firstname" name="firstname"
+						placeholder=" Enter Your  Firstname" required> <label
+						for="lastname">Last Name</label> <input type="text" id="lastname"
+						name="lastname" placeholder=" Enter Your Lastname" required>
+					<label for="" email>Email</label> <input type="email" id="email"
+						name="email" placeholder=" Enter Your Email" required> <label
 						for="Exam Name">Exam Name</label> <select id="Exam" name="Exam">
 						<option>Java</option>
 						<option>HTML</option>
 						<option>CSS</option>
+						<option>Python</option>
 					</select> <label for="subject">Subject</label>
 					<textarea id="subject" name="subject"
 						placeholder="Enter your Message" style="height: 170px"></textarea>
@@ -470,15 +340,15 @@ footer .container {
 					<li id="menu-item-18823"
 						class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18823"><a
 						href="about.jsp">About Us</a></li>
-					<li><a href="Contact.jsp">Contact Us</a></li>
-					<li><a href="#">Testimonials</a></li>
-					<li><a href="#">Leadership</a></li>
-					<li><a href="#">News</a></li>
+					<li><a href="contact.jsp">Contact Us</a></li>
+					<li><a href="testiMoinals.jsp">Testimonials</a></li>
+					<li><a href="leader.jsp">Leadership</a></li>
 					<li><a href="#">Partners</a></li>
 					<li><a href="#">Privacy and Data Security</a></li>
 				</ul>
 			</div>
 		</section>
+
 
 		<div class="container">
 			<p>&copy; 2024 Online Examination Skill Evaluator. All rights

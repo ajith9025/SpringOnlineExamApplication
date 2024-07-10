@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Add Question</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        form {
+            width: 50%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="number"],
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            width: auto;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h2>Add Question</h2>
+    <form action="/question" method="post">
+        <label for="examId">Exam ID:</label><br>
+        <input type="number" name="examId" id="examId" required><br>
+        <label for="examName">Exam Name:</label><br>
+        <input type="text" name="examName" id="examName"required><br>
+        <label for="questionText">Question Text:</label><br>
+        <textarea name="questionText" id="questionText"required></textarea><br>
+        <label for="option1">Option 1:</label><br>
+        <input type="text" name="option1" id="option1"required><br>
+        <label for="option2">Option 2:</label><br>
+        <input type="text" name="option2" id="option2"required><br>
+        <label for="option3">Option 3:</label><br>
+        <input type="text" name="option3" id="option3"required><br>
+        <label for="option4">Option 4:</label><br>
+        <input type="text" name="option4" id="option4"required><br>
+        <label for="correctAnswer">Correct Answer:</label><br>
+        <input type="text" name="correctAnswer" id="correctAnswer"required><br>
+        <input type="submit" value="Submit">
+    </form>
+    
+</body>
+</html>
+    

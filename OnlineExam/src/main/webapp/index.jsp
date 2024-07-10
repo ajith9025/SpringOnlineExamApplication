@@ -4,168 +4,132 @@
 <html lang="en">
 <head>
 <meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Online Examination Skill Evaluator</title>
+
 <style>
-body{
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-image: url("bram-naus-n8Qb1ZAkK88-unsplash.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-} 
-ul{
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-nav {
-    background-color:black;
-    overflow: hidden;
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f0f0f0;
 }
 
 .navbar {
-    list-style-type: none;
-    display: flex;
-    justify-content:end;
+	list-style-type: none;
+	margin: 0;
+	padding: 14px 0;
+	background-color: black;
+	text-align: right;
 }
+
 .navbar li {
-    float: left;
-}
-.navbar a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-}
-.navbar a:hover {
-  background-color: #ddd;
-  color: black;
-}
-.navbar a.active {
-  background-color:aqua;
-  color: white;
+	display: inline;
+	margin-right: 20px;
 }
 
-main .welcome {
-    text-align: center;
-    padding: 4em 0;
-    background-color: #f9f9f9;
+.navbar li a {
+	color: white;
+	text-decoration: none;
+	padding: 15px 15px;
+	transition: background-color 0.3s ease;
 }
 
-main .welcome h2 {
-    margin-bottom: 0.5em;
+.navbar li a:hover {
+	background-color: #ddd;
+	color: black;
 }
 
-main .welcome p {
-    margin-bottom: 1em;
-    font-size: 1.2em;
-    color: #666;
+.active {
+	background-color:  aqua;
+	
 }
 
-main .welcome .btn {
-    display: inline-block;
-    padding: 0.8em 1.5em;
-    color: white;
-    background-color: #4CAF50;
-    text-decoration: none;
-    border-radius: 0.3em;
-    transition: background 0.3s;
+h1 {
+	text-align: center;
+	margin: 20px 0;
 }
 
-main .welcome .btn:hover {
-    background-color: #45a049;
+main {
+	padding: 20px;
+}
+
+.welcome {
+	background-color: #fff;
+	padding: 20px;
+	margin-bottom: 20px;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.welcome h2 {
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+
+.welcome p {
+	font-size: 16px;
+	line-height: 1.6;
+}
+
+.welcome a {
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: red;
+	color: white;
+	text-decoration: none;
+	border-radius: 5px;
+	margin-top: 10px;
+	transition: background-color 0.3s ease;
+}
+
+.welcome a:hover {
+	background-color: black;
 }
 
 footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
+	background-color: black;
+	color: #fff;
+	text-align: center;
+	padding: 10px 0;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
 }
-
-footer .container {
-    margin: 0 auto;
-    max-width: 1200px;
-    padding: 0 1em;
-}
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 500px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    animation-name: animatetop;
-    animation-duration: 0.4s
-}
-
-@keyframes animatetop {
-    from {top: -300px; opacity: 0}
-    to {top: 0; opacity: 1}
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.modal-body {
-    padding: 2px 16px;
-}
-
 </style>
 </head>
 <body>
-         <nav>
-            <ul class="navbar">
-               <li><a class="active" href="#">Home</a></li>
-               <li><a href="login.jsp">Login</a></li>
-               <li><a href="register.jsp">Sign up</a></li>
-            </ul>
-        </nav>
-        <h1>Online Exam</h1>
-        <main>
-            <section class="welcome">
-                <div class="container">
-                    <h2>Welcome to the Online Examination Skill Evaluator</h2>
-                    <p>Assess your skills and improve your knowledge through our comprehensive online exams. Sign up today and start your learning journey!</p>
-                    <a href="register.jsp">Get Started</a>
-                </div>
-            </section><br><br><br><br><br><br><br><br>
-        </main>
-        <footer>
-            <div class="container">
-                <p>&copy; 2024 Online Examination Skill Evaluator. All rights reserved.</p>
-            </div>
-        </footer>
-        
+	<nav>
+		<ul class="navbar">
+
+			<li><a class="active" href="#">Home</a></li>
+			<li><a href="login.jsp">Login</a></li>
+			<li><a href="register.jsp">Sign up</a></li>
+		</ul>
+	</nav>
+
+	<h1>Online Exam</h1>
+
+	<main>
+		<section class="welcome">
+			<div class="container">
+				<h2>Welcome to the Online Examination Skill Evaluator</h2>
+				<p>Assess your skills and improve your knowledge through our
+					comprehensive online exams. Sign up today and start your learning
+					journey!</p>
+				<a href="register.jsp">Get Started</a>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<div class="container">
+			<p>&copy; 2024 Online Examination Skill Evaluator. All rights
+				reserved.</p>
+		</div>
+	</footer>
 </body>
 </html>
