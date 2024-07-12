@@ -25,25 +25,39 @@ body {
 	color: white;
 }
 
-.navbar a:hover {
-	background-color: #555;
-}
-
-.navbar a.active {
-	background-color: aqua;
-	color: black;
-}
-
 .views {
-	padding: 50px 20px;
+    margin: 50px 0;
+    padding: 50px 20px;
 	text-align: center;
 }
 
 .view {
-	border: 1px solid #ccc;
+    margin-bottom: 30px;
+    transition: transform 0.3s;
+    border: 1px solid #ccc;
 	padding: 20px;
 	margin: 20px;
-	background-color: white;
+	background-color: blue;
+}
+
+.view:hover {
+    transform: scale(1.05);
+}
+
+.view .card {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.view h3 a {
+    text-decoration: none;
+    color: black;
+}
+
+.view h3 a:hover {
+    color: black;
 }
 
 footer {
@@ -59,13 +73,14 @@ footer {
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark">
-		<ul class="navbar-nav mr-auto">
-			<li class="nav-item"><a class="nav-link" href="exam.jsp">Add
-					Exam</a></li>
-			<li class="nav-item"><a class="nav-link" href="question.html">Add
-					Question</a></li>
-			<li class="nav-item"><a class="nav-link" href="results.jsp">Add
-					Results</a></li>
+		<a class="navbar-brand" href="#">
+			<img src="" width="30" height="30" class="d-inline-block align-top" alt="">
+			Online Exam
+		</a>
+		<ul class="navbar-nav ml-auto">
+			<li class="nav-item"><a class="nav-link" href="exam.jsp">Add Exam</a></li>
+			<li class="nav-item"><a class="nav-link" href="question.html">Add Question</a></li>
+			<li class="nav-item"><a class="nav-link" href="results.jsp">Add Results</a></li>
 			<li class="nav-item"><a class="nav-link" href="index.jsp">Logout</a></li>
 		</ul>
 	</nav>
@@ -76,23 +91,23 @@ footer {
 		<section class="views">
 			<div class="row justify-content-center">
 				<div class="col-lg-4 col-md-6">
-					<div class="view">
+					<div class="view card text-center">
 						<h3>
-							<a href="/examDetails">View All Exams</a>
+							<a href="/examDetails" class="card-link">View All Exams</a>
 						</h3>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6">
-					<div class="view">
+					<div class="view card text-center">
 						<h3>
-							<a href="/questionDetails">View All Questions</a>
+							<a href="/questionDetails" class="card-link">View All Questions</a>
 						</h3>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6">
-					<div class="view">
+					<div class="view card text-center">
 						<h3>
-							<a href="/resultsDetails">View All Results</a>
+							<a href="/resultsDetails" class="card-link">View All Results</a>
 						</h3>
 					</div>
 				</div>
@@ -102,11 +117,9 @@ footer {
 
 	<footer>
 		<div class="container">
-			<p>&copy; 2024 Online Examination Skill Evaluator. All rights
-				reserved.</p>
+			<p>&copy; 2024 Online Examination Skill Evaluator. All rights reserved.</p>
 		</div>
 	</footer>
-
 
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

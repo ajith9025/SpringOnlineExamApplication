@@ -46,5 +46,6 @@ public class Results {
 		return "Results [resultId=" + resultId + ", userId=" + userId + ", examId=" + examId + ", marksObtained=" + marksObtained
 				+ "]";
 	}
+	
 }
 

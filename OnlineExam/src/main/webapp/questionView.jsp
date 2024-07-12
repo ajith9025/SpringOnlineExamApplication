@@ -16,7 +16,6 @@ body {
 
 .question {
 	background-color: #ffffff;
-	border: 1px solid #ccc;
 	padding: 10px;
 	margin-bottom: 15px;
 }
@@ -26,7 +25,20 @@ body {
 }
 
 .question input[type="radio"] {
-	margin-right: 10px;
+	display: none;
+}
+
+.question label {
+	display: block;
+	padding: 10px;
+	border: 1px solid #ccc;
+	margin-bottom: 5px;
+	cursor: pointer;
+}
+
+.question input[type="radio"]:checked+label {
+	background-color: #ff6347;
+	color: white;
 }
 
 button {
@@ -44,39 +56,38 @@ button {
 
 button:hover {
 	background-color: black;
-	 color: white;
+	color: white;
 }
 
 #timer {
 	background-color: #ffffff;
-	border: 2px solid #ccc;
 	padding: 20px;
 	margin-bottom: 15px;
 	float: right;
 }
 
-/* Additional styling for the timer span */
 #timer #time {
 	font-weight: bold;
 	color: #ff6347;
 }
- #submitBtn {
-        background-color: orange;
-        color: black;
-        border: none;
-        padding: 10px 20px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin-top: 10px;
-        cursor: pointer;
-    }
 
-    #submitBtn:hover {
-        background-color: black;
-        color: white;
-    }
+#submitBtn {
+	background-color: orange;
+	color: black;
+	border: none;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin-top: 10px;
+	cursor: pointer;
+}
+
+#submitBtn:hover {
+	background-color: black;
+	color: white;
+}
 </style>
 </head>
 <body>
@@ -96,38 +107,41 @@ button:hover {
 			int questionIndex = 0;
 			for (AddQuestion question : questions) {
 		%>
-		
+
 		<div class="question"
 			style="<%=(questionIndex == 0) ? "" : "display: none;"%>">
-
-
 			<p>
 				<strong><%=++questionIndex%></strong>.
 				<%=question.getQuestionText()%></p>
 
-
 			<input type="hidden" name="examId" value="<%=question.getExamId()%>">
 			<p>
-				<input type="radio" name="answer_<%=question.getExamId()%>"
-					value="option1">
-				<%=question.getOption1()%></p>
+				<input type="radio" id="option1_<%=question.getExamId()%>"
+					name="answer_<%=question.getExamId()%>" value="option1"> <label
+					for="option1_<%=question.getExamId()%>"><%=question.getOption1()%></label>
+			</p>
 			<p>
-				<input type="radio" name="answer_<%=question.getExamId()%>"
-					value="option2">
-				<%=question.getOption2()%></p>
+				<input type="radio" id="option2_<%=question.getExamId()%>"
+					name="answer_<%=question.getExamId()%>" value="option2"> <label
+					for="option2_<%=question.getExamId()%>"><%=question.getOption2()%></label>
+			</p>
 			<p>
-				<input type="radio" name="answer_<%=question.getExamId()%>"
-					value="option3">
-				<%=question.getOption3()%></p>
+				<input type="radio" id="option3_<%=question.getExamId()%>"
+					name="answer_<%=question.getExamId()%>" value="option3"> <label
+					for="option3_<%=question.getExamId()%>"><%=question.getOption3()%></label>
+			</p>
 			<p>
-				<input type="radio" name="answer_<%=question.getExamId()%>"
-					value="option4">
-				<%=question.getOption4()%></p>
+				<input type="radio" id="option4_<%=question.getExamId()%>"
+					name="answer_<%=question.getExamId()%>" value="option4"> <label
+					for="option4_<%=question.getExamId()%>"><%=question.getOption4()%></label>
+			</p>
 		</div>
+
 		<%
 		}
 		}
 		%>
+
 		<button type="button" onclick="previousQuestion()"
 			style="display: none;">Previous Question</button>
 		<button type="button" onclick="nextQuestion()">Next Question</button>
@@ -137,12 +151,13 @@ button:hover {
 	<script>
 		var currentQuestion = 0;
 		var totalQuestions =
-	<%=questions.size()%>;
-		var examDuration = 10 * 60; 
+	<%=questions.size()%>
+		;
+		var examDuration = 10 * 60;
 
 		function startTimer(duration, display) {
 			var timer = duration, minutes, seconds;
-			setInterval(function() {
+			var intervalId = setInterval(function() {
 				minutes = parseInt(timer / 60, 10);
 				seconds = parseInt(timer % 60, 10);
 
@@ -152,8 +167,8 @@ button:hover {
 				display.textContent = minutes + ":" + seconds;
 
 				if (--timer < 0) {
+					clearInterval(intervalId);
 					timer = 0;
-					
 					document.getElementById('quizForm').submit();
 				}
 			}, 1000);
@@ -163,6 +178,7 @@ button:hover {
 			var display = document.querySelector('#time');
 			startTimer(examDuration, display);
 		};
+
 		function nextQuestion() {
 			if (currentQuestion < totalQuestions - 1) {
 				document.getElementsByClassName('question')[currentQuestion].style.display = 'none';

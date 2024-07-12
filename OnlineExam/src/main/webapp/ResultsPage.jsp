@@ -39,16 +39,16 @@
         <h2>Results</h2>
         <table class="table table-bordered">
             <tr>
-                <th>Total Questions</th>
-                <td><%= request.getAttribute("totalQuestions") %></td>
+                <th>Total Questions Attempted</th>
+                <td><%= request.getAttribute("totalQuestionsAttemted") %></td>
             </tr>
             <tr>
                 <th>Correct Answers</th>
                 <td><%= request.getAttribute("correctAnswers") %></td>
             </tr>
             <tr>
-                <th>Incorrect Answers</th>
-                <td><%= request.getAttribute("incorrectAnswers") %></td>
+                <th>Percentages</th>
+                <td><%= request.getAttribute("Percentages") %></td>
             </tr>
         </table>
     </div>
