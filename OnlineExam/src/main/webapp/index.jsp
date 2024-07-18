@@ -1,5 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,54 +14,80 @@
 
 body {
 	font-family: Arial, sans-serif;
-	background-color: #f0f0f0;
+	background-image: url("pencil-eraser-paper-clip-with-blue-card-paper-white-backdrop.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .navbar {
-	list-style-type: none;
-	margin: 0;
-	padding: 14px 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 	background-color: black;
-	text-align: right;
+	padding: 4px 5px;
 }
 
-.navbar li {
-	display: inline;
+.navbar .logo {
+	display: flex;
+	align-items: center;
+}
+
+.navbar .logo img {
+	height: 40px;
+	margin-right: 10px;
+}
+
+.navbar .logo .site-name {
+	color: white;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.navbar ul {
+	list-style-type: none;
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+
+.navbar ul li {
 	margin-right: 20px;
 }
 
-.navbar li a {
+.navbar ul li a {
 	color: white;
 	text-decoration: none;
 	padding: 15px 15px;
 	transition: background-color 0.3s ease;
 }
 
-.navbar li a:hover {
+.navbar ul li a:hover {
 	background-color: #ddd;
 	color: black;
 }
 
 .active {
-	background-color:  aqua;
-	
-}
-
-h1 {
-	text-align: center;
-	margin: 20px 0;
+	background-color: aqua;
 }
 
 main {
-	padding: 20px;
+	padding: 130px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .welcome {
 	background-color: #fff;
-	padding: 20px;
-	margin-bottom: 20px;
+	padding: 30px;
+	margin-bottom: 10px;
+	margin-top: -30px;
 	border-radius: 8px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	max-width: 80%;
+	position: relative;
+    left: 310px;
 }
 
 .welcome h2 {
@@ -91,6 +115,12 @@ main {
 	background-color: black;
 }
 
+.container {
+	max-width: 1000px;
+	margin: 0 auto;
+	text-align: center;
+}
+
 footer {
 	background-color: black;
 	color: #fff;
@@ -103,16 +133,17 @@ footer {
 </style>
 </head>
 <body>
-	<nav>
-		<ul class="navbar">
-
+	<nav class="navbar">
+		<div class="logo">
+			<img src="online-course_11131091.png" alt="Logo">
+			<span class="site-name">SkillCheck Evaluator</span>
+		</div>
+		<ul>
 			<li><a class="active" href="#">Home</a></li>
 			<li><a href="login.jsp">Login</a></li>
 			<li><a href="register.jsp">Sign up</a></li>
 		</ul>
 	</nav>
-
-	<h1>Online Exam</h1>
 
 	<main>
 		<section class="welcome">
@@ -125,13 +156,13 @@ footer {
 			</div>
 		</section>
 	</main>
+
 	<footer>
 		<div class="container">
 			<p>&copy; 2024 Online Examination Skill Evaluator. All rights
 				reserved.</p>
 		</div>
 	</footer>
-	
-	
+
 </body>
 </html>

@@ -15,23 +15,31 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 100vh;
+	height: 80vh;
 	margin: 0;
-	background-color: #f0f0f0;
+	background-image: url("top-view-office-stationery-with-pen-notebook.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+	
 }
 
 .container {
 	width: 100%;
-	max-width: 400px;
-	padding: 20px;
-	background-color: #ffffff;
+	max-width: 300px;
+	padding:50px;
+	border: 1px solid black;
+	background-color: lightWhite;
 	border-radius: 8px;
 	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+	position: relative;
+	margin-top:100px;
+	left:230px;
 }
 
 .content {
 	position: relative;
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 }
 
 .error {

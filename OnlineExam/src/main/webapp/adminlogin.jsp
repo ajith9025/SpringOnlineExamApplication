@@ -12,13 +12,17 @@
 <style>
 body {
 	font-family: Arial, Helvetica, sans-serif;
-	background-color: #f8f9fa;
 	margin: 0;
 	padding: 0;
+	background-image:
+		url("top-view-office-stationery-with-pen-notebook.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 }
 
 .navbar {
-	background-color: black;
+	background-color: purple;
 }
 
 .navbar a {
@@ -26,38 +30,38 @@ body {
 }
 
 .views {
-    margin: 50px 0;
-    padding: 50px 20px;
+	margin: 50px 0;
+	padding: 50px 20px;
 	text-align: center;
 }
 
 .view {
-    margin-bottom: 30px;
-    transition: transform 0.3s;
-    border: 1px solid #ccc;
+	margin-bottom: 30px;
+	transition: transform 0.3s;
+	border: 1px solid black;
 	padding: 20px;
 	margin: 20px;
-	background-color: blue;
+	background-color: lightwhite;
 }
 
 .view:hover {
-    transform: scale(1.05);
+	transform: scale(1.05);
 }
 
 .view .card {
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .view h3 a {
-    text-decoration: none;
-    color: black;
+	text-decoration: none;
+	color: black;
 }
 
 .view h3 a:hover {
-    color: black;
+	color: black;
 }
 
 footer {
@@ -73,14 +77,16 @@ footer {
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark">
-		<a class="navbar-brand" href="#">
-			<img src="" width="30" height="30" class="d-inline-block align-top" alt="">
-			Online Exam
+		<a class="navbar-brand" href="#"> <img src="online-course_11131091.png" width="35"
+			height="30" class="d-inline-block align-top" alt="logo">SkillCheck Evaluator
 		</a>
 		<ul class="navbar-nav ml-auto">
-			<li class="nav-item"><a class="nav-link" href="exam.jsp">Add Exam</a></li>
-			<li class="nav-item"><a class="nav-link" href="question.html">Add Question</a></li>
-			<li class="nav-item"><a class="nav-link" href="results.jsp">Add Results</a></li>
+			<li class="nav-item"><a class="nav-link" href="exam.jsp">Add
+					Exam</a></li>
+			<li class="nav-item"><a class="nav-link" href="question.html">Add
+					Question</a></li>
+			<li class="nav-item"><a class="nav-link" href="results.jsp">Add
+					Results</a></li>
 			<li class="nav-item"><a class="nav-link" href="index.jsp">Logout</a></li>
 		</ul>
 	</nav>
@@ -100,7 +106,8 @@ footer {
 				<div class="col-lg-4 col-md-6">
 					<div class="view card text-center">
 						<h3>
-							<a href="/questionDetails" class="card-link">View All Questions</a>
+							<a href="/questionDetails" class="card-link">View All
+								Questions</a>
 						</h3>
 					</div>
 				</div>
@@ -117,7 +124,8 @@ footer {
 
 	<footer>
 		<div class="container">
-			<p>&copy; 2024 Online Examination Skill Evaluator. All rights reserved.</p>
+			<p>&copy; 2024 Online Examination Skill Evaluator. All rights
+				reserved.</p>
 		</div>
 	</footer>
 

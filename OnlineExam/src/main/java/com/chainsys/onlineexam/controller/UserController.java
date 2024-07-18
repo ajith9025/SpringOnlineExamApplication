@@ -93,24 +93,29 @@ public class UserController {
 		}
 	}
 
+	/*
+	 * @GetMapping("/test") public String getQuestion(HttpSession session, Model
+	 * model) throws ClassNotFoundException, SQLException { AddQuestion question =
+	 * (AddQuestion) session.getAttribute("question"); question.getExamName();
+	 * 
+	 * try { List<AddQuestion> questions = userDao.viewQuestion(question);
+	 * model.addAttribute("questions", questions); } catch (ClassNotFoundException
+	 * e) {
+	 * 
+	 * e.printStackTrace(); } catch (SQLException e) {
+	 * 
+	 * e.printStackTrace(); }
+	 * 
+	 * return "questionView.jsp";
+	 * 
+	 * }
+	 */
+
 	@GetMapping("/test")
-	public String getQuestion(HttpSession session, Model model) {
-		AddQuestion examName = (AddQuestion) session.getAttribute("course");
-		examName.getExamName();
-
-		try {
-			List<AddQuestion> questions = userDao.viewQuestion(examName);
-			model.addAttribute("questions", questions);
-		} catch (ClassNotFoundException e) {
-
-			e.printStackTrace();
-		} catch (SQLException e) {
-
-			e.printStackTrace();
-		}
-
+	public String getQuestion(Model model) {
+		List<AddQuestion> questions = userDao.viewQuestion();
+		model.addAttribute("questions", questions);
 		return "questionView.jsp";
-
 	}
 
 	@GetMapping("/results")
@@ -158,6 +163,7 @@ public class UserController {
 					correctCount++;
 				}
 			}
+
 		}
 
 		double percentage = (correctCount * 100.0) / totalCount;
@@ -168,5 +174,4 @@ public class UserController {
 		model.addAttribute("percentage", percentage);
 		return "ResultsPage.jsp";
 	}
-
 }

@@ -7,14 +7,23 @@
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <style>
+body
+{
+    background-image: url("freepik-export-20240712115014ckol.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
 
 .container {
 	max-width: 400px;
 	margin: 50px auto;
 	padding: 20px;
-	border: 1px solid #ccc;
+	border: 1px solid black;
 	border-radius: 5px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	position: relative;
+    left: 270px;
 }
 
 
@@ -140,6 +149,35 @@
 												}
 											});
 
+							passwordInput
+									.addEventListener(
+											'input',
+											function() {
+												var passwordError = document
+														.getElementById('passwordError');
+												if (!/(?=.*[a-zA-Z])(?=.*\d)(?=.*[@#$%^&+=!]).{8}/
+														.test(passwordInput.value)) {
+													passwordError.textContent = 'Password must be at least 8 characters only and include at least one letter, one number, and one special character.';
+												} else {
+													passwordError.textContent = '';
+												}
+											});
+							
+
+							emailInput
+									.addEventListener(
+											'input',
+											function() {
+												var emailError = document
+														.getElementById('emailError');
+												if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+														.test(emailInput.value)) {
+													emailError.textContent = 'Please enter a valid email address.';
+												} else {
+													emailError.textContent = '';
+												}
+											});
+
 							contactNoInput
 									.addEventListener(
 											'input',
@@ -156,33 +194,7 @@
 												}
 											});
 
-							emailInput
-									.addEventListener(
-											'input',
-											function() {
-												var emailError = document
-														.getElementById('emailError');
-												if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
-														.test(emailInput.value)) {
-													emailError.textContent = 'Please enter a valid email address.';
-												} else {
-													emailError.textContent = '';
-												}
-											});
 
-							passwordInput
-									.addEventListener(
-											'input',
-											function() {
-												var passwordError = document
-														.getElementById('passwordError');
-												if (!/(?=.*[a-zA-Z])(?=.*\d)(?=.*[@#$%^&+=!]).{8}/
-														.test(passwordInput.value)) {
-													passwordError.textContent = 'Password must be at least 8 characters only and include at least one letter, one number, and one special character.';
-												} else {
-													passwordError.textContent = '';
-												}
-											});
 
 							submitBtn
 									.addEventListener(
@@ -197,10 +209,10 @@
 													isValid = false;
 												}
 
-												if (!/^[0-9]{10}$/
-														.test(mobileInput.value)) {
+												if (!/(?=.*[a-zA-Z])(?=.*\d)(?=.*[@#$%^&+=!]).{8}/
+														.test(passwordInput.value)) {
 													document
-															.getElementById('contactnoError').textContent = 'Please enter a valid 10-digit mobile number.';
+															.getElementById('passwordError').textContent = 'Password must be at least 8 characters only and include at least one letter, one number, and one special character.';
 													isValid = false;
 												}
 
@@ -210,14 +222,17 @@
 															.getElementById('emailError').textContent = 'Please enter a valid email address.';
 													isValid = false;
 												}
-
-												if (!/(?=.*[a-zA-Z])(?=.*\d)(?=.*[@#$%^&+=!]).{8}/
-														.test(passwordInput.value)) {
+												
+												if (!/^[0-9]{10}$/
+														.test(mobileInput.value)) {
 													document
-															.getElementById('passwordError').textContent = 'Password must be at least 8 characters only and include at least one letter, one number, and one special character.';
+															.getElementById('contactnoError').textContent = 'Please enter a valid 10-digit mobile number.';
 													isValid = false;
 												}
 
+												
+
+												
 												if (!isValid) {
 													event.preventDefault();
 												}

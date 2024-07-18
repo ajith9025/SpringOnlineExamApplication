@@ -5,11 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="index.css">
 <link rel="stylesheet" href="exam.css">
-<link rel="stylesheet"
-	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 <title>Online Examination Skill Evaluator</title>
-
 
 <style>
 body {
@@ -54,7 +51,12 @@ h1 {
 }
 
 .cart-item p {
-	margin-bottom: 10px;
+	display: inline-block;
+	padding: auto;
+	background-color: #007bff;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 5px;
 }
 
 .cart-item a {
@@ -102,7 +104,7 @@ input[type=text], input[type=email], select, textarea {
 }
 
 input[type=submit] {
-	background-color: red;;
+	background-color: red;
 	color: white;
 	padding: 12px 20px;
 	border: none;
@@ -146,12 +148,15 @@ ul {
 nav {
 	background-color: black;
 	overflow: hidden;
+	display: flex;
+	align-items: center;
 }
 
 .navbar {
 	list-style-type: none;
 	display: flex;
 	justify-content: end;
+	margin-left: auto;
 }
 
 .navbar li {
@@ -174,6 +179,20 @@ nav {
 .navbar a.active {
 	background-color: aqua;
 	color: white;
+}
+
+.logo-title {
+	display: flex;
+	align-items: center;
+}
+
+.logo-title img {
+	height: 30px;
+	margin-right: 15px;
+}
+
+main {
+	padding: 130px;
 }
 
 footer {
@@ -232,28 +251,29 @@ footer .container {
 <body>
 
 	<nav>
+		<div class="logo-title">
+			<img src="online-course_11131091.png" alt="Logo">
+			<span style="color: white; font-size: 20px;"> SkillCheck Evaluator</span>
+		</div>
 		<ul class="navbar">
-
 			<li><a class="active" href="#">Home</a></li>
 			<li><a href="examPage.jsp">Start Exam</a></li>
 			<li><a href="contact.jsp">Contact Us</a></li>
 			<li><a href="index.jsp">Logout</a></li>
-
 		</ul>
 	</nav>
-	<h1>Online Exam</h1>
+	<br>
+
 	<div class="header">
 		<div style="text-align: center">
 			<h1>Our Online Examination Partner</h1>
 			<p>
-				Online exam system for all your testing needs for <b>assessment,recruitment
-					and selection</b>
+				Online exam system for all your testing needs for <b>assessment, recruitment, and selection</b>
 			</p>
 		</div>
 	</div>
 	<br>
 	<br>
-
 
 	<div class="container">
 		<h1>Select Your Skills</h1>
@@ -295,19 +315,13 @@ footer .container {
 				<div class="col">
 					<h2>Our Client Partner</h2>
 					<div class="trusted-logos">
-						<img src="amazon.png" alt="Company 1"> <img src="TCS.png"
-							alt="Company 2"> <img src="google.png" alt="Company 3">
-						<img src="zoho.png" alt="Company 4"> <img src="hcl1.png"
-							alt="Company 5">
+						<img src="amazon.png" alt="Company 1"> <img src="TCS.png" alt="Company 2"> <img src="google.png" alt="Company 3">
+						<img src="zoho.png" alt="Company 4"> <img src="hcl1.png" alt="Company 5">
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-
-
-
-
 
 	<div class="row">
 		<div style="text-align: center">
@@ -320,48 +334,38 @@ footer .container {
 			</div>
 			<div class="column">
 				<form onsubmit="handleSubmit(event)">
-					<label for="fname">First Name</label> <input type="text"
-						id="firstname" name="firstname"
-						placeholder=" Enter Your  Firstname" required> <label
-						for="lastname">Last Name</label> <input type="text" id="lastname"
-						name="lastname" placeholder=" Enter Your Lastname" required>
-					<label for="" email>Email</label> <input type="email" id="email"
-						name="email" placeholder=" Enter Your Email" required> <label
-						for="Exam Name">Exam Name</label> <select id="Exam" name="Exam">
+					<label for="firstname">First Name</label> <input type="text" id="firstname" name="firstname" placeholder="Enter Your Firstname" required>
+					<label for="lastname">Last Name</label> <input type="text" id="lastname" name="lastname" placeholder="Enter Your Lastname" required>
+					<label for="email">Email</label> <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
+					<label for="Exam Name">Exam Name</label> <select id="Exam" name="Exam">
 						<option>Java</option>
 						<option>HTML</option>
 						<option>CSS</option>
 						<option>Python</option>
-					</select> <label for="subject">Subject</label>
-					<textarea id="subject" name="subject"
-						placeholder="Enter your Message" style="height: 170px"></textarea>
+					</select>
+					<label for="subject">Subject</label>
+					<textarea id="subject" name="subject" placeholder="Enter your Message" style="height: 170px"></textarea>
 					<input type="submit" value="Submit">
 				</form>
 			</div>
 		</div>
 	</div>
 	<footer>
-		<section id="nav_menu-3"
-			class="widget hide_widget_title widget_nav_menu">
+		<section id="nav_menu-3" class="widget hide_widget_title widget_nav_menu">
 			<h2>Company</h2>
 			<div class="menu-footermenu1-container">
 				<ul id="menu-footermenu1" class="widget-menu">
-					<li id="menu-item-18823"
-						class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18823"><a
-						href="about.jsp">About Us</a></li>
+					<li id="menu-item-18823" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18823"><a href="about.jsp">About Us</a></li>
 					<li><a href="contact.jsp">Contact Us</a></li>
-					<li><a href="testiMoinals.jsp">Testimonials</a></li>
+					<li><a href="testimonials.jsp">Testimonials</a></li>
 					<li><a href="leader.jsp">Leadership</a></li>
 					<li><a href="#">Partners</a></li>
 					<li><a href="#">Privacy and Data Security</a></li>
 				</ul>
 			</div>
 		</section>
-
-
 		<div class="container">
-			<p>&copy; 2024 Online Examination Skill Evaluator. All rights
-				reserved.</p>
+			<p>&copy; 2024 Online Examination Skill Evaluator. All rights reserved.</p>
 		</div>
 	</footer>
 </body>

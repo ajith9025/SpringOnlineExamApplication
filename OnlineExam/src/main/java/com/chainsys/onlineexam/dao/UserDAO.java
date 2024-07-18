@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import com.chainsys.onlineexam.model.AddQuestion;
 import com.chainsys.onlineexam.model.Results;
+import com.chainsys.onlineexam.model.UserExam;
 import com.chainsys.onlineexam.model.Users;
 
 @Repository
@@ -19,8 +20,12 @@ public interface UserDAO {
 	
 	public boolean isUserExists(String email);
 
-	public List<AddQuestion> viewQuestion(AddQuestion examName) throws ClassNotFoundException, SQLException;
+	/*
+	 * public List<AddQuestion> viewQuestion(AddQuestion examName) throws
+	 * ClassNotFoundException, SQLException;
+	 */
 
 	public List<Map<Integer, String>> getAllCorrectAnswers() throws ClassNotFoundException, SQLException;
-
+    
+	 public List<AddQuestion> viewQuestion(); 
 }

@@ -7,7 +7,7 @@ import java.util.Map;
 
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;
-import com.chainsys.onlineexam.model.AddQuestion;
+
 
 @Component
 public class AnswerRowMapper implements RowMapper<Map<Integer, String>> {
